@@ -1,0 +1,47 @@
+@import 'shared/variables';
+.sub-menu {
+     :global {
+        .ant-menu-submenu-title {
+            padding-left: 15px !important;
+            a {
+                font-family: 'Lora'
+            }
+        }
+        .ant-menu-item-selected {
+            background-color: transparent !important;
+            a {
+                color: $primary-color;
+            }
+        }
+        .ant-menu-item {
+            padding-right: 0 !important;
+            padding-left: 38px !important;
+            a {
+                text-transform: uppercase;
+                font-family: Lora;
+                .name {
+                    margin-left: 15px;
+                }
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+.wrap-list {
+    background: transparent !important;
+    a {
+        font-weight: 600;
+    }
+     :global {
+        .ant-menu-sub {
+            background: #232b39 !important;
+        }
+    }
+}
+
+.nav-list-container {
+    height: calc(100% - 4em);
+}

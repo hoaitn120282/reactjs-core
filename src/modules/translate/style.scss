@@ -1,0 +1,19 @@
+.boxStyle {
+    background: #ffffff;
+     :global {
+        .ant-table-pagination {
+            padding-right: 15px;
+        }
+    }
+}
+
+.boxPaddingStyle {
+    padding: 0.8rem;
+}
+
+.headerStyle {
+    >span {
+        display: flex;
+        align-items: center;
+    }
+}

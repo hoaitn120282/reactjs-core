@@ -1,0 +1,12 @@
+@import './../../../shared/variables';
+.button {
+    border: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    user-select: none;
+}

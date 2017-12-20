@@ -1,0 +1,7 @@
+.inputStyle {
+    background: transparent !important;
+    &:focus {
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+}

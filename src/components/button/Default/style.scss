@@ -1,0 +1,9 @@
+@import './../../../shared/variables';
+.button {
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    padding: 2px 12px;
+    cursor: pointer;
+    white-space: nowrap;
+    user-select: none;
+}

@@ -1,0 +1,35 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 7,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true,
+            "experimentalObjectRestSpread": true,
+            "experimentalDecorators": true
+        }
+    },
+    "extends": ["eslint:recommended", "plugin:react/recommended", "react-app"],
+    "rules": {
+        "semi": "warn",
+        "no-console": "warn",
+        "prefer-const": "warn",
+        "no-unused-labels": "warn",
+        "jsx-a11y/href-no-hash": "off",
+        "react/no-unescaped-entities": "off",
+        "import/no-webpack-loader-syntax": "off",
+        "react/prop-types": "warn",
+        "react/display-name": "off"
+    },
+    "plugins": ["react", "jsx-a11y"],
+    "globals": {
+        "document": true,
+        "window": true,
+        "google": true,
+        "FB": true
+    },
+    "settings": {
+        "import/resolver": {
+            "root": ["./src/*"]
+        }
+    }
+}

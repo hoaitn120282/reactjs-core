@@ -1,0 +1,57 @@
+{
+    "plugins": [
+        "transform-class-properties",
+        "syntax-dynamic-import",
+        ["transform-object-rest-spread", { "useBuiltIns": true }],
+        [
+            "transform-react-jsx",
+            {
+                "useBuiltIns": true
+            }
+        ],
+        [
+            "transform-runtime",
+            {
+                "helpers": false,
+                "polyfill": false,
+                "regenerator": true,
+                "moduleName": "babel-runtime"
+            }
+        ],
+        [
+            "transform-regenerator",
+            {
+                "asyncGenerators": false,
+                "generators": false,
+                "async": false
+            }
+        ]
+    ],
+    "presets": ["env", "react"],
+    "env": {
+        "test": {
+            "presets": [
+                [
+                    "env",
+                    {
+                        "targets": {
+                            "node": "current"
+                        }
+                    }
+                ]
+            ],
+            "plugins": ["dynamic-import-node"]
+        },
+        "production": {
+            "plugins": [
+                [
+                    "transform-react-remove-prop-types",
+                    {
+                        "mode": "remove",
+                        "removeImport": true
+                    }
+                ]
+            ]
+        }
+    }
+}

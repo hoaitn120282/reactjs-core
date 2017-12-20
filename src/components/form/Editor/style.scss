@@ -1,0 +1,17 @@
+.toolbar-menu {
+    position: relative;
+    padding: 1px 18px 17px;
+    margin: 0;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 20px;
+}
+
+.button {
+    color: #cccccc;
+    cursor: pointer;
+    padding: 3px;
+    margin-right: 6px;
+    &[data-active='true'] {
+        color: #000000;
+    }
+}

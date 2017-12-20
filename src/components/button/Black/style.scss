@@ -1,0 +1,17 @@
+@import 'shared/variables';
+.button {
+    border: none;
+    background: #1e2531;
+    padding: 5px 30px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    user-select: none;
+    border-radius: 2.4px;
+    color: $primary-color;
+    * {
+        color: $primary-color;
+    }
+}

@@ -1,0 +1,16 @@
+export const authAPI = '/auth/login';
+export const logoutAPI = '/auth/logout';
+export const registerAPI = '/auth/register';
+export const meAPI = '/me';
+
+export const uploadAPI = '/upload';
+
+// Upload UnAuthorization file
+export const uploadUnAuthAPI = '/upload/normal/media';
+
+export const languageAPI = '/languages';
+
+export const translateAPI = '/translates';
+
+
+export const localeAPI = '/locales';
