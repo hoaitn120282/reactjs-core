@@ -1,16 +1,10 @@
 export const APP_DOM_CONTAINER = 'root';
 
 //API URL
-export const BASE_URL =
-    process.env.REACT_APP_ENV === 'production'
-        ? 'http://ec2-13-229-60-66.ap-southeast-1.compute.amazonaws.com'
-        : 'http://ec2-52-74-221-84.ap-southeast-1.compute.amazonaws.com';
+export const BASE_URL = process.env.REACT_APP_ENV === 'production' ? 'http://localhost' : 'http://localhost:3000';
 
 // ASSET URL
-export const SITE_URL =
-    process.env.REACT_APP_ENV === 'production'
-        ? 'http://ec2-13-229-60-66.ap-southeast-1.compute.amazonaws.com'
-        : 'http://ec2-52-74-221-84.ap-southeast-1.compute.amazonaws.com';
+export const SITE_URL = process.env.REACT_APP_ENV === 'production' ? 'http://localhost' : 'http://localhost:3000';
 
 export const DEFAULT_REDIRECT = '/dashboard';
 
