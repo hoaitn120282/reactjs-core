@@ -1,19 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FaSortDesc, FaSort, FaSortAsc } from 'react-icons/lib/fa';
 import _ from 'lodash';
+
+import { FontAwesome } from 'components/Icon';
 
 const OrderComponent = ({ children, direction, ...props }) => {
     let caret;
     switch (_.toLower(direction)) {
         case 'asc':
-            caret = <FaSortAsc />;
+            caret = <FontAwesome name="sort-asc" />;
             break;
         case 'desc':
-            caret = <FaSortDesc />;
+            caret = <FontAwesome name="sort-desc" />;
             break;
         default:
-            caret = <FaSort color="#7b7996" />;
+            caret = <FontAwesome name="sort" color="#7b7996" />;
             break;
     }
     return (

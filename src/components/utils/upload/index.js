@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Dropzone from 'react-dropzone';
 import { Input, InputGroup } from 'reactstrap';
-import { FaFolderOpen } from 'react-icons/lib/fa';
 
+import { FontAwesome } from 'components/Icon';
 import { UPLOAD_MAX_FILE_SIZE } from 'constants/config';
 import { wrapDrop, buttonDrop } from './style.scss';
 
@@ -14,7 +14,7 @@ const UploadComponent = props => {
             <InputGroup>
                 <Input disabled />
                 <div role="button" className={buttonDrop}>
-                    <FaFolderOpen />
+                    <FontAwesome name="folder-open" />
                 </div>
             </InputGroup>
         </Dropzone>

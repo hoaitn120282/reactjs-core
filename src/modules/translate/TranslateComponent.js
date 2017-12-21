@@ -2,14 +2,13 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Col, Row, Button } from 'reactstrap';
 import { Helmet } from 'react-helmet';
-import { FaPlus } from 'react-icons/lib/fa';
 
 import { Notification } from 'helpers';
 import ModalAddLocaleComponent from './pages/create/ModalAddLocaleComponent';
 import { Translate } from 'components/utils';
 import TableFilterComponent from './TableFilter';
 import routes from './routes';
-// import TranslateRawComponent from './TranslateRaw';
+import { FontAwesome } from 'components/Icon';
 import { boxStyle } from './style.scss';
 
 class TranslateComponent extends Component {
@@ -55,7 +54,7 @@ class TranslateComponent extends Component {
                     <span className="flex" />
                     <div>
                         <Button role="button" color="primary" onClick={this.toggleModalAdd}>
-                            <FaPlus />
+                            <FontAwesome name="plus" />
                         </Button>
                     </div>
                 </div>

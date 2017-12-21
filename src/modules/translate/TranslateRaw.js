@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-// import { Button, ButtonGroup } from 'reactstrap';
-// import { Popconfirm } from 'antd';
-// import { FaPencil } from 'react-icons/lib/fa';
 
 class LanguageRawComponent extends Component {
     confirm = e => {

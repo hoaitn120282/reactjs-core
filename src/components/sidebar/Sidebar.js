@@ -8,19 +8,17 @@ import _ from 'lodash';
 // icons
 import { Translate } from 'components/utils';
 import { isAdmin, hasRole } from 'helpers/Guard';
-import IconDashBoard from 'react-icons/lib/fa/th-large';
-import { FaLanguage, FaGlobe } from 'react-icons/lib/fa';
 import ScrollArea from 'react-scrollbar';
 import LogoImg from 'assets/images/logo.png';
 import styles from './style.scss';
-import { MdEventSeat } from 'react-icons/lib/md';
+import { FontAwesome } from 'components/Icon';
 
 const { SubMenu } = Menu;
 
 const NavHead = props => (
     <header className="nav-head">
         <NavLink to="/">
-            <img src={LogoImg} style={{ width: 150 }} alt="" />
+            <img src={LogoImg} style={{ maxHeight: 37 }} alt="" />
             <strong className="h4 text-uppercase" />
         </NavLink>
     </header>
@@ -30,7 +28,7 @@ NavHead.propTypes = {
     mini: PropTypes.bool
 };
 
-class NavList extends React.Component {
+class NavList extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -137,7 +135,7 @@ class NavList extends React.Component {
                     >
                         <Menu.Item key="dashboard">
                             <NavLink to="/dashboard" activeClassName="active">
-                                <IconDashBoard size="18" />
+                                <FontAwesome name="th-large" />
                                 <span className="name">
                                     <Translate text="dashboard" />
                                 </span>
@@ -156,7 +154,7 @@ class NavList extends React.Component {
                         >
                             <Menu.Item key="language">
                                 <NavLink to="/language" activeClassName="active">
-                                    <FaGlobe size="18" />
+                                    <FontAwesome name="globe" />
                                     <span className="name">
                                         <Translate text="language" />
                                     </span>
@@ -165,7 +163,7 @@ class NavList extends React.Component {
 
                             <Menu.Item key="translate">
                                 <NavLink to="/translate" activeClassName="active">
-                                    <FaLanguage size="18" />
+                                    <FontAwesome name="language" />
                                     <span className="name">
                                         <Translate text="translate" />
                                     </span>
@@ -173,7 +171,7 @@ class NavList extends React.Component {
                             </Menu.Item>
                             <Menu.Item key="role">
                                 <NavLink to="/role" activeClassName="active">
-                                    <MdEventSeat size="18" />
+                                    <FontAwesome name="user-secret" />
                                     <span className="name">
                                         <Translate text="roles" />
                                     </span>

@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-// import { Col, FormGroup, Label, Input } from 'reactstrap';
 import { Button, ButtonGroup } from 'reactstrap';
 import { Popconfirm } from 'antd';
-import { FaTrash, FaPencil } from 'react-icons/lib/fa';
+import { FontAwesome } from 'components/Icon';
 
 class LanguageRawComponent extends Component {
     confirm = e => {
@@ -33,11 +32,11 @@ class LanguageRawComponent extends Component {
                                 cancelText={translate('no')}
                             >
                                 <Button role="button" color="danger" size="sm">
-                                    <FaTrash />
+                                    <FontAwesome name="trash" />
                                 </Button>
                             </Popconfirm>
                             <Button onClick={e => onEdit(data)} role="button" color="secondary" size="sm">
-                                <FaPencil />
+                                <FontAwesome name="pencil" />
                             </Button>
                         </ButtonGroup>
                     </div>

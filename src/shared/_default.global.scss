@@ -91,7 +91,7 @@ ul {
             padding-top: 0.9rem;
             padding-bottom: 0.9rem;
         }
-        > svg {
+        >svg {
             position: absolute;
             top: 0.8rem;
             left: 1rem;
@@ -125,10 +125,6 @@ ul {
 }
 
 // Move from 'src\modules\login\style.scss'
-.img-login {
-    width: 240px;
-}
-
 .view-content.view-session.page-login {
     position: relative;
     &:before {
@@ -152,12 +148,6 @@ ul {
         border-radius: 2px;
         padding: 28px 93px;
         box-shadow: 0 6px 13px 0 rgba(0, 0, 0, 0.25);
-    }
-    .logo-login {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 100px 0px 80px 0px;
     }
     .btn-form {
         cursor: pointer;
@@ -242,7 +232,7 @@ ul {
         height: 4.4em;
         margin-left: -1.5rem;
     }
-    .nav-head svg > path {
+    .nav-head svg>path {
         stroke: $site-nav-list-hover-color;
     }
     .nav-head .toggle-dot {
@@ -283,11 +273,11 @@ ul {
     .nav-head a {
         color: $site-nav-head-color;
         font-weight: 700;
-        > svg {
+        >svg {
             position: relative;
             top: 1px;
         }
-        > strong {
+        >strong {
             display: inline-block;
             margin-left: 0.2rem;
             letter-spacing: 2.4px;

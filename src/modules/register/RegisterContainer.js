@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
@@ -60,7 +60,7 @@ class RegisterContainer extends Component {
         const { commonActions, translate } = this.props;
         const { register: { isFetching } } = this.props;
         return (
-            <div>
+            <Fragment>
                 <Helmet>
                     <title>Register</title>
                 </Helmet>
@@ -70,7 +70,7 @@ class RegisterContainer extends Component {
                     isFetching={isFetching}
                     translate={translate}
                 />
-            </div>
+            </Fragment>
         );
     }
 }

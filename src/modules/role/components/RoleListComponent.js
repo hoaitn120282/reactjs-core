@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-// import { Route } from 'react-router-dom';
 import { Table, Button, Row, Col } from 'reactstrap';
-import { FaPlus } from 'react-icons/lib/fa';
 
 import RoleRaw from './RoleRaw';
 import ModalAddRole from './ModalAddRole';
 import ModelEditRole from './ModelEditRole';
 import { Translate } from 'components/utils';
+import { FontAwesome } from 'components/Icon';
 
 class RoleComponent extends Component {
     constructor(props) {
@@ -57,7 +56,7 @@ class RoleComponent extends Component {
                         <div className="d-flex flex-row-reverse">
                             <div className="p-2">
                                 <Button role="button" color="primary" onClick={this.toggleModalAdd}>
-                                    <FaPlus />
+                                    <FontAwesome name="plus" />
                                 </Button>
                             </div>
                         </div>

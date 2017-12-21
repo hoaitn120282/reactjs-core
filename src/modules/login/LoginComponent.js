@@ -4,12 +4,11 @@ import { Link } from 'react-router-dom';
 import { Form, Input, Label, FormGroup, Button, Row, Col } from 'reactstrap';
 
 import { Translate } from 'components/utils';
-import './style.scss';
 import Validation from '../../helpers/Validation';
 import ErrMessage from '../../components/errors/ErrMessage';
 import _ from 'lodash';
 import logo from 'assets/images/logo.png';
-// import Loading from '../../components/loading/Cube';
+import { logoLogin } from './style.scss';
 import classnames from 'classnames';
 class Login extends Component {
     constructor(props) {
@@ -26,7 +25,6 @@ class Login extends Component {
 
     handleLogin = e => {
         e.preventDefault();
-        e.stopPropagation();
         const { dataForm: { username, password } } = this.state;
         const { onSubmit } = this.props;
         //get validation when submit form
@@ -63,8 +61,8 @@ class Login extends Component {
                     <div className="container-fluid">
                         <Row>
                             <Col md={{ size: 4, offset: 4 }}>
-                                <div className="justify-content-center logo-login">
-                                    <img className="img-fluid img-login" src={logo} alt="Logo" />
+                                <div className={`justify-content-center ${logoLogin}`}>
+                                    <img className="img-fluid" src={logo} alt="Logo" style={{ maxHeight: 160 }} />
                                 </div>
                             </Col>
                         </Row>

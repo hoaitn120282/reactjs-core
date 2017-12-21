@@ -2,9 +2,10 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Editor } from 'slate-react';
 import { Value } from 'slate';
-import { FaBold, FaItalic, FaUnderline, FaCode, FaStrikethrough } from 'react-icons/lib/fa';
+
 import classnames from 'classnames';
 
+import { FontAwesome } from 'components/Icon';
 import styles from './style.scss';
 /**
  * Define the default node type.
@@ -206,11 +207,11 @@ class EditorComponent extends Component {
     renderToolbar = () => {
         return (
             <div className={styles.toolbarMenu}>
-                {this.renderMarkButton('bold', <FaBold />)}
-                {this.renderMarkButton('italic', <FaItalic />)}
-                {this.renderMarkButton('underlined', <FaUnderline />)}
-                {this.renderMarkButton('strikethrough', <FaStrikethrough />)}
-                {this.renderMarkButton('code', <FaCode />)}
+                {this.renderMarkButton('bold', <FontAwesome name="bold" />)}
+                {this.renderMarkButton('italic', <FontAwesome name="italic" />)}
+                {this.renderMarkButton('underlined', <FontAwesome name="underline" />)}
+                {this.renderMarkButton('strikethrough', <FontAwesome name="strikethrough" />)}
+                {this.renderMarkButton('code', <FontAwesome name="code" />)}
 
                 {/* {this.renderBlockButton('heading-one', 'looks_one')}
                 {this.renderBlockButton('heading-two', 'looks_two')}
