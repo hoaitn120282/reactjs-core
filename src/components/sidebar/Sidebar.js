@@ -4,11 +4,11 @@ import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { Menu } from 'antd';
 import _ from 'lodash';
+import { Scrollbars } from 'react-custom-scrollbars';
 
 // icons
 import { Translate } from 'components/utils';
 import { isAdmin, hasRole } from 'helpers/Guard';
-import ScrollArea from 'react-scrollbar';
 import LogoImg from 'assets/images/logo.png';
 import styles from './style.scss';
 import { FontAwesome } from 'components/Icon';
@@ -110,11 +110,7 @@ class NavList extends Component {
         const { auth } = this.props;
         const { selectedKeys, openKeys } = this.state;
         return (
-            <ScrollArea
-                className={styles.navListContainer}
-                horizontal={false}
-                verticalScrollbarStyle={{ width: '4px', marginLeft: '10px' }}
-            >
+            <Scrollbars className={styles.navListContainer} autoHide>
                 <Menu
                     mode="inline"
                     theme="dark"
@@ -181,7 +177,7 @@ class NavList extends Component {
                     )}
                 </Menu>
                 {/* end scroll-area */}
-            </ScrollArea>
+            </Scrollbars>
         );
     }
 }

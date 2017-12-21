@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { LocaleProvider } from 'antd';
+import moment from 'moment';
 import enUS from 'antd/lib/locale-provider/en_US';
-import zhCN from 'antd/lib/locale-provider/zh_CN';
 import viVN from 'antd/lib/locale-provider/vi_VN';
 
 // This function will map the current redux state to the props for the component that it is "connected" to.
@@ -12,14 +12,14 @@ const mapStateToProps = state => {
     switch (locale) {
         case 'en':
         case 'en_US':
+            moment.locale('en');
             return { locale: enUS };
         case 'vi':
         case 'vi_VN':
+            moment.locale('vi');
             return { locale: viVN };
-        case 'zh':
-        case 'zh_CN':
-            return { locale: zhCN };
         default:
+            moment.locale('en');
             return { locale: enUS };
     }
 };
