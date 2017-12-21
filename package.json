@@ -73,8 +73,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom",
-    "reactopt": "node node_modules/reactopt/main.js"
+    "test": "node scripts/test.js --env=jsdom"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.1",
