@@ -1,20 +1,9 @@
-import auth from './auth/reducer';
-import * as authActions from './auth/actions';
-
-import role from './role/reducer';
-import * as roleActions from './role/actions';
-
-import common from './common/reducer';
-import * as commonActions from './common/actions';
-
-import register from './register/reducer';
-import * as registerActions from './register/actions';
-
-import language from './language/reducer';
-import * as languageActions from './language/actions';
-
-import widget from './widget/reducer';
-import * as widgetActions from './widget/actions';
+import { auth, authActions } from './auth';
+import { role, roleActions } from './role';
+import { common, commonActions } from './common';
+import { register, registerActions } from './register';
+import { language, languageActions } from './language';
+import { widget, widgetActions } from './widget';
 
 export const reducers = {
     auth,
