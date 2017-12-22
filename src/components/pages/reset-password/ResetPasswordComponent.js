@@ -20,34 +20,35 @@ class ResetPassword extends Component {
         };
     }
     changeInput = (e, field) => {
+        const { dataForm } = this.state;
         if (field === 'confirmedPassword') {
             //valiadation when on change confirm password
             const validationConfirm = Validation.checkConfirmPass({
                 password: this.state.dataForm.password,
                 confirm: e.target.value
             });
-            this.setState({
-                validationForm: Validation.updateValidationForm(validationConfirm, this.state.validationForm)
-            });
+            this.setState(prevState => ({
+                validationForm: Validation.updateValidationForm(validationConfirm, prevState.validationForm)
+            }));
         } else {
             //update validation input
             const validationInput = Validation.validationOnChange(e.target);
-            this.setState({
-                validationForm: Validation.updateValidationForm(validationInput, this.state.validationForm)
-            });
+            this.setState(prevState => ({
+                validationForm: Validation.updateValidationForm(validationInput, prevState.validationForm)
+            }));
         }
         //set data for form
-        const dataForm = Object.assign({}, this.state.dataForm);
-        dataForm[field] = e.target.value;
-        this.setState({ dataForm });
+        Object.asign(dataForm, { [field]: e.target.value });
+        this.setState(() => ({ dataForm }));
     };
     _handleSumit = e => {
         e.preventDefault();
         e.stopPropagation();
         const { onSubmit } = this.props;
+        const { validationForm: cValidationForm } = this.state;
         const inputs = document.getElementById('resetPassword').elements;
-        const validationForm = Validation.validationWhenSubmit({}, inputs, this.state.validationForm);
-        this.setState({ validationForm: validationForm });
+        const validationForm = Validation.validationWhenSubmit({}, inputs, cValidationForm);
+        this.setState(prevState => ({ validationForm }));
         if (_.isEmpty(validationForm)) {
             onSubmit(this.state.dataForm);
         }

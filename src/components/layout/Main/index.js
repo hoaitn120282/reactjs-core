@@ -23,7 +23,8 @@ class MainLayout extends Component {
 
     toggleNav = e => {
         e.preventDefault();
-        this.setState({ navMini: !this.state.navMini });
+        const { navMini } = this.state;
+        this.setState({ navMini: !navMini });
     };
     hideNav = e => {
         e.preventDefault();
