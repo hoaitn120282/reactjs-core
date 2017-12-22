@@ -64,7 +64,6 @@ class MainLayout extends Component {
 
 MainLayout.propTypes = {
     children: PropTypes.any.isRequired,
-    history: PropTypes.object.isRequired,
     auth: PropTypes.object.isRequired,
     authActions: PropTypes.object.isRequired,
     language: PropTypes.object.isRequired,

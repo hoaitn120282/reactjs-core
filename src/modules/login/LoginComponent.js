@@ -129,8 +129,7 @@ class Login extends Component {
 }
 
 Login.propTypes = {
-    onSubmit: PropTypes.func.isRequired,
-    auth: PropTypes.object.isRequired
+    onSubmit: PropTypes.func.isRequired
 };
 
 export default Login;

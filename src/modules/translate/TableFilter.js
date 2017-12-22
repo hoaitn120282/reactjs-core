@@ -13,7 +13,6 @@ class TableFilterComponent extends Component {
         super();
 
         this.state = {
-            openAdd: false,
             searchText: '',
             filterData: []
         };

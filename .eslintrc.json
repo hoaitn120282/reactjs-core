@@ -12,13 +12,25 @@
     "rules": {
         "semi": "warn",
         "no-console": "warn",
+        "no-var": "warn",
         "prefer-const": "warn",
         "no-unused-labels": "warn",
+        "no-unused-vars": "warn",
         "jsx-a11y/href-no-hash": "off",
-        "react/no-unescaped-entities": "off",
-        "import/no-webpack-loader-syntax": "off",
+        "import/no-webpack-loader-syntax": "warn",
+        "max-params": ["warn", 3],
+        "max-lines": ["warn", { "max": 450, "skipBlankLines": true, "skipComments": true }],
         "react/prop-types": "warn",
-        "react/display-name": "off"
+        "react/display-name": "off",
+        "react/no-unescaped-entities": "off",
+        "react/no-access-state-in-setstate": "off",
+        "react/no-did-mount-set-state": "warn",
+        "react/no-did-update-set-state": "warn",
+        "react/no-multi-comp": ["warn", { "ignoreStateless": true }],
+        "react/no-redundant-should-component-update": "warn",
+        "react/no-unused-prop-types": "warn",
+        "react/no-unused-state": "warn",
+        "react/boolean-prop-naming": "warn"
     },
     "plugins": ["react", "jsx-a11y"],
     "globals": {

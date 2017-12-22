@@ -69,7 +69,6 @@ class LoginContainer extends Component {
 }
 
 LoginContainer.propTypes = {
-    location: PropTypes.object.isRequired,
     auth: PropTypes.object.isRequired,
     authActions: PropTypes.object.isRequired,
     history: PropTypes.object.isRequired,

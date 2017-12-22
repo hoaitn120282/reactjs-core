@@ -24,15 +24,10 @@ const NavHead = props => (
     </header>
 );
 
-NavHead.propTypes = {
-    mini: PropTypes.bool
-};
-
 class NavList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selected: 0,
             openKeys: [''],
             selectedKeys: ['']
         };
@@ -62,18 +57,11 @@ class NavList extends Component {
         }
     };
     handleClick = (index, e) => {
-        const c = e.currentTarget.className;
         e.preventDefault();
         e.stopPropagation();
-        this.setState({
-            selected: c.indexOf('selected') >= 0 ? '' : index
-        });
     };
     handleOpen = (index, e) => {
         e.stopPropagation();
-        this.setState({
-            selected: index
-        });
     };
 
     checkActive = (data, props) => {
@@ -184,23 +172,17 @@ class NavList extends Component {
 
 NavList.propTypes = {
     location: PropTypes.object.isRequired,
-    auth: PropTypes.object.isRequired,
-    hasRole: PropTypes.func.isRequired
+    auth: PropTypes.object.isRequired
 };
 
-class NavComponent extends Component {
-    render() {
-        const props = this.props;
-        const { location, auth, hasRole } = this.props;
-
-        return (
-            <nav className={`site-nav ${props.mini ? 'mini' : ''}`}>
-                <NavHead {...props} />
-                <NavList location={location} auth={auth} hasRole={hasRole} />
-            </nav>
-        );
-    }
-}
+const NavComponent = ({ location, auth, hasRole, mini }) => {
+    return (
+        <nav className={`site-nav ${mini ? 'mini' : ''}`}>
+            <NavHead />
+            <NavList location={location} auth={auth} hasRole={hasRole} />
+        </nav>
+    );
+};
 
 NavComponent.defaultProps = {
     auth: {},

@@ -33,7 +33,6 @@ class LanguageEditContainer extends Component {
 
 LanguageEditContainer.propTypes = {
     match: PropTypes.object.isRequired,
-    auth: PropTypes.object.isRequired,
     language: PropTypes.object.isRequired,
     languageActions: PropTypes.object.isRequired
 };

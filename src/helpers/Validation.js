@@ -89,7 +89,7 @@ class Validation {
     };
     validationWhenSubmit = (validationMore = {}, inputs, validationForm) => {
         validationForm = {};
-        for (var i = 0; i < inputs.length; i++) {
+        for (let i = 0; i < inputs.length; i++) {
             const validationInput = this.validationOnChange(inputs[i]);
             if (validationInput.error) {
                 validationForm[validationInput.name] = validationInput.text;

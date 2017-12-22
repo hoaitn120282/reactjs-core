@@ -63,9 +63,7 @@ class RegisterComponent extends Component {
 
 RegisterComponent.propTypes = {
     onSubmit: PropTypes.func.isRequired,
-    commonActions: PropTypes.object.isRequired,
-    isFetching: PropTypes.bool.isRequired,
-    translate: PropTypes.func.isRequired
+    isFetching: PropTypes.bool.isRequired
 };
 
 export default RegisterComponent;

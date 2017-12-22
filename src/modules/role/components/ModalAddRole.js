@@ -87,7 +87,6 @@ ModelAddRole.propTypes = {
     isOpen: PropTypes.bool,
     toggleModal: PropTypes.func.isRequired,
     saveAction: PropTypes.func.isRequired,
-    translate: PropTypes.func.isRequired,
     initData: PropTypes.object
 };
 

@@ -143,7 +143,6 @@ RoleViewComponent.propTypes = {
     widget: PropTypes.string,
     routes: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
     fields: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
-    actions: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
     action: PropTypes.oneOf(['create', 'new', 'update', 'edit', 'delete', 'remove', 'read', 'view']),
     auth: PropTypes.object.isRequired,
     owner: PropTypes.oneOfType([PropTypes.number, PropTypes.array, PropTypes.string]),

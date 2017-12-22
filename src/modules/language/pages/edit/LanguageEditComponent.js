@@ -84,8 +84,6 @@ class LanguageEditComponent extends Component {
 LanguageEditComponent.defaultProps = {};
 
 LanguageEditComponent.propTypes = {
-    data: PropTypes.object,
-    match: PropTypes.object,
     languageInfo: PropTypes.object.isRequired
 };
 

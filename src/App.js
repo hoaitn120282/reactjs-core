@@ -82,11 +82,9 @@ class App extends Component {
 }
 
 App.propTypes = {
-    loading: PropTypes.bool.isRequired,
     commonActions: PropTypes.object.isRequired,
     languageActions: PropTypes.object.isRequired,
     authActions: PropTypes.object.isRequired,
-    auth: PropTypes.object.isRequired,
     language: PropTypes.object.isRequired
 };
 

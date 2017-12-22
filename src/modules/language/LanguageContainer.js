@@ -20,7 +20,6 @@ class LanguageContainer extends Component {
 }
 
 LanguageContainer.propTypes = {
-    auth: PropTypes.object.isRequired,
     languageActions: PropTypes.object.isRequired,
     language: PropTypes.object.isRequired,
     translate: PropTypes.func.isRequired

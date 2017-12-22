@@ -72,6 +72,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
+    "lint": "./node_modules/.bin/eslint src/",
     "test": "node scripts/test.js --env=jsdom"
   },
   "devDependencies": {
