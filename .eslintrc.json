@@ -29,7 +29,7 @@
         "react/no-multi-comp": ["warn", { "ignoreStateless": true }],
         "react/no-redundant-should-component-update": "warn",
         "react/no-unused-prop-types": "warn",
-        "react/no-unused-state": "warn",
+        "react/no-unused-state": "off",
         "react/boolean-prop-naming": "warn"
     },
     "plugins": ["react", "jsx-a11y"],
