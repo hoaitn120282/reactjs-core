@@ -1,3 +1,4 @@
+import immer from 'immer';
 import { SUCCESS_FETCH_WIDGET_ROUTE_LIST, SUCCESS_FETCH_WIDGET_FIELD_LIST } from './constants';
 
 const initState = {
@@ -15,18 +16,18 @@ const fieldByWidget = (state, data) => {
 };
 
 export default function widget(state = initState, action) {
-    switch (action.type) {
-        case SUCCESS_FETCH_WIDGET_ROUTE_LIST:
-            return Object.assign({}, state, {
-                routeData: action.payload
-            });
+    return immer(state, draftState => {
+        switch (action.type) {
+            case SUCCESS_FETCH_WIDGET_ROUTE_LIST:
+                draftState.routeData = action.payload;
+                return;
 
-        case SUCCESS_FETCH_WIDGET_FIELD_LIST:
-            return Object.assign({}, state, {
-                widgetField: fieldByWidget(state, action.payload)
-            });
+            case SUCCESS_FETCH_WIDGET_FIELD_LIST:
+                draftState.widgetField = fieldByWidget(state, action.payload);
+                return;
 
-        default:
-            return state;
-    }
+            default:
+                return;
+        }
+    });
 }
