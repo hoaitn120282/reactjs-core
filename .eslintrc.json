@@ -1,6 +1,6 @@
 {
     "parserOptions": {
-        "ecmaVersion": 7,
+        "ecmaVersion": 8,
         "sourceType": "module",
         "ecmaFeatures": {
             "jsx": true,
@@ -38,6 +38,10 @@
         "window": true,
         "google": true,
         "FB": true
+    },
+    "env": {
+        "es6": true,
+        "browser": true
     },
     "settings": {
         "import/resolver": {
